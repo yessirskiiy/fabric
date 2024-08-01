@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  font-family: "Montserrat", serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1016px;
+  background: radial-gradient(82.33% 70.44% at 50% 0%, #26394D 0%, #212529 100%);
+}
+
+.logo_bar {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo_bar-img {
+  background-image: url("../assets/img/Logo.svg");
+  width: 78px;
+  height: 48px;
+  top: 48px;
+  left: 212px;
+}
+
+.logo_bar-button {
+  width: 236px;
+  height: 48px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid #FF7F22;
+  border-radius: 60px;
+  color: #FFFFFF;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 8px 10px 0 #00000029;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 192px;
+
+  .intro_title {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 72px;
+    width: 470px;
+    height: 216px;
+    color: #FFFFFF;
+    margin-left: 130px;
+    margin-bottom: 24px;
+  }
+
+  .intro_paragraph {
+    font-size: 24px;
+    font-weight: 600;
+    color: #A3B8CC;
+    height: 32px;
+  }
+
+  .intro_img {
+    display: flex;
+    width: 366px;
+    height: 320px;
+
+    .intro_img-ellipse {
+      z-index: -1;
+      position: absolute;
+      background-color: #1E2936;
+      margin-top: 4px;
+      margin-left: 31px;
+      width: 275px;
+      height: 275px;
+      border-radius: 360px;
+
+    }
+
+    .intro_img-blue {
+      background-size: cover;
+      background-image: url("../assets/img/Front Male 1.svg");
+      width: 176px;
+      height: 310px;
+
+    }
+
+    .intro_img-red {
+      background-size: cover;
+      background-image: url("../assets/img/Designer Male 1.svg");
+      transform: scaleX(-1);
+      margin-top: 80px;
+      width: 138px;
+      height: 195px;
+    }
+
+  }
+}
+
+
+.wallet {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 130px;
+
+  .wallet_title {
+    color: #FFFFFF;
+    height: 40px;
+    width: 756px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+
+  .wallet_container {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(30, 10px);
+    width: 100%;
+    height: 20px;
+    margin-top: 60px;
+
+    .wallet_container-coin{
+      position: absolute;
+      background-image: url('../assets/img/Coin.svg');
+      background-size: cover;
+      height: 20px;
+      width: 16px;
+
+    }
+    .wallet_container-coin:nth-child(1) { left: 0; }
+    .wallet_container-coin:nth-child(2) { left: 10px; }
+    .wallet_container-coin:nth-child(3) { left: 20px; }
+    .wallet_container-coin:nth-child(4) { left: 30px; }
+    .wallet_container-coin:nth-child(5) { left: 40px; }
+    .wallet_container-coin:nth-child(6) { left: 50px; }
+    .wallet_container-coin:nth-child(7) { left: 60px; }
+    .wallet_container-coin:nth-child(8) { left: 70px; }
+    .wallet_container-coin:nth-child(9) { left: 80px; }
+    .wallet_container-coin:nth-child(10) { left: 90px; }
+  }
+
+  .wallet_counter {
+    font-size: 24px;
+    margin-top: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #A3B8CC;
+  }
+
+  .wallet_cheat {
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+
+
+    .wallet_cheat-action {
+      background-image: url("../assets/img/Link.svg");
+      background-position: -20px -25px;
+      width: 103px;
+      height: 24px;
+      cursor: pointer;
+
+      &:hover {
+        background-position: -20px -69px;
+      }
+
+      &:active {
+        background-position: -20px -113px;
+      }
+
+      &:disabled {
+        background-position: -20px -157px;
+      }
+
+    }
+
+    .wallet_checkbox {
+      background-image: url("../assets/img/Chekbox.svg");
+      margin-left: 27px;
+      width: 32px;
+      height: 32px;
+      background-position: -24px -24px;
+
+    }
+
+    .wallet_cheat.checked{
+      background-position: -24px -128px;
+    }
+  }
+
+}
+
+.market_title {
+  margin-top: 100px;
+  margin-left: 130px;
+  position: absolute;
+  color: #FFFFFF;
+  height: 40px;
+  width: 756px;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.market{
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 220px;
+  justify-content: space-evenly;
+
+  & p{
+    color: #A3B8CC;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  & h3{
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  & button{
+    height: 48px;
+    width: 236px;
+    border-radius: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 24px;
+    background: linear-gradient(180deg, #FF7F22 0%, #FF5722 100%);
+    box-shadow: 0px 8px 10px 0px #00000029;
+    border: 2px solid #FF7F22;
+    color: #FFFFFF;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover{
+      background: #FF5722;
+    }
+
+    &:active{
+      background: #FF7F22;
+    }
+
+    &:disabled{
+      background: #4C5865;
+      border: 0;
+      color: #7D90A6;
+    }
+  }
+
+  .market_arms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .market_arms-img{
+      background-image: url("../assets/img/ArmIcon.svg");
+      background-position: -15px;
+      border-radius: 360px;
+      width: 236px;
+      height: 128px;
+    }
+  }
+
+  .market_processor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .market_processor-img{
+      background-image: url("../assets/img/ProcIcon.svg");
+      background-position: -15px;
+      border-radius: 360px;
+      width: 236px;
+      height: 128px;
+    }
+  }
+
+  .market_soul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .market_soul-img{
+      background-image: url("../assets/img/SoulIcon.svg");
+      background-position: -15px;
+      border-radius: 360px;
+      width: 236px;
+      height: 128px;
+    }
+
+  }
+
+}
+
+.storage_title {
+  margin-top: 100px;
+  margin-left: 130px;
+  position: absolute;
+  color: #FFFFFF;
+  height: 40px;
+  width: 756px;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.storage{
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 220px;
+  justify-content: space-evenly;
+
+
+  & p{
+    color: #A3B8CC;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  & h3{
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  & button{
+    height: 48px;
+    width: 236px;
+    border-radius: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 24px;
+    background-color: transparent;
+    border: 2px solid #22B3E3;
+    color: #7CDAF9;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover{
+      background: #7CDAF9;
+      color: #212529;
+    }
+
+    &:active{
+      background: #22B3E3;
+    }
+
+    &:disabled{
+      background-color: transparent;
+      border: 2px solid #4C5865;
+      color: #7D90A6;
+    }
+  }
+}
+
+
+
+
+
+
+
