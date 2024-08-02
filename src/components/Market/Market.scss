@@ -1,0 +1,115 @@
+.market{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  .market_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    margin-left: 70px;
+
+  }
+
+  & h2{
+    box-sizing: border-box;
+    margin-top: 100px;
+    margin-left: 130px;
+    color: #FFFFFF;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+
+  }
+
+  & p{
+    color: #A3B8CC;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  & h3{
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 32px;
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  & button{
+    height: 48px;
+    width: 236px;
+    border-radius: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 24px;
+    background: linear-gradient(180deg, #FF7F22 0%, #FF5722 100%);
+    box-shadow: 0 8px 10px 0 #00000029;
+    border: 2px solid #FF7F22;
+    color: #FFFFFF;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover{
+      background: #FF5722;
+    }
+
+    &:active{
+      background: #FF7F22;
+    }
+
+    &.disabled{
+      background: #4C5865;
+      border: 0;
+      color: #7D90A6;
+      cursor: unset;
+    }
+  }
+
+  .market_arms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .market_arms-img{
+      background-image: url("../../assets/img/ArmIcon.svg");
+      background-position: -15px;
+      border-radius: 360px;
+      width: 236px;
+      height: 128px;
+    }
+  }
+
+  .market_processor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .market_processor-img{
+      background-image: url("../../assets/img/ProcIcon.svg");
+      background-position: -15px;
+      border-radius: 360px;
+      width: 236px;
+      height: 128px;
+    }
+  }
+
+  .market_soul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .market_soul-img{
+      background-image: url("../../assets/img/SoulIcon.svg");
+      background-position: -15px;
+      border-radius: 360px;
+      width: 236px;
+      height: 128px;
+    }
+
+  }
+
+}
