@@ -37,6 +37,21 @@ body {
   text-align: center;
   box-shadow: 0 8px 10px 0 #00000029;
   cursor: pointer;
+
+  &:hover{
+    background-color: #FF5722;
+  }
+
+  &:active{
+    background-color: #FF7F22;
+  }
+
+  &:disabled{
+    border: 2px solid #4C5865;
+    background-color: transparent;
+    cursor: unset;
+    color: #4C5865;
+  }
 }
 
 .intro {
@@ -97,254 +112,6 @@ body {
   }
 }
 
-
-.storage{
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-
-  .storage_container{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 60px;
-    margin-left: 70px;
-
-  }
-
-  & h2 {
-    box-sizing: border-box;
-    margin-top: 100px;
-    margin-left: 130px;
-    color: #FFFFFF;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: 600;
-  }
-
-
-  & p{
-    color: #A3B8CC;
-    font-size: 16px;
-    text-align: center;
-    line-height: 24px;
-    font-weight: 600;
-    margin-top: 5px;
-  }
-
-  & h3{
-    color: #FFFFFF;
-    text-align: center;
-    line-height: 32px;
-    font-size: 20px;
-    margin-top: 25px;
-  }
-
-  & button{
-    height: 48px;
-    width: 236px;
-    border-radius: 60px;
-    text-align: center;
-    box-sizing: border-box;
-    margin-top: 24px;
-    background-color: transparent;
-    border: 2px solid #22B3E3;
-    color: #7CDAF9;
-    line-height: 24px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-
-    &:hover{
-      background: #7CDAF9;
-      color: #212529;
-    }
-
-    &:active{
-      background: #22B3E3;
-    }
-
-    &:disabled{
-      background-color: transparent;
-      border: 2px solid #4C5865;
-      color: #7D90A6;
-    }
-  }
-}
-
-
-.factory{
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-
-  & h2 {
-    box-sizing: border-box;
-    margin-top: 100px;
-    margin-left: 130px;
-    color: #FFFFFF;
-    font-size: 32px;
-    line-height: 40px;
-    font-weight: 600;
-  }
-
-  .factory_container{
-    display: flex;
-    margin-top: 60px;
-    margin-left: 70px;
-    justify-content: space-evenly;
-
-
-    .factory_actions{
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
-
-      .produce_btn {
-        width: 236px;
-        height: 48px;
-        box-sizing: border-box;
-        background-color: transparent;
-        border: 2px solid #FF7F22;
-        border-radius: 60px;
-        color: #FFFFFF;
-        line-height: 24px;
-        font-size: 16px;
-        font-weight: 600;
-        text-align: center;
-        box-shadow: 0 8px 10px 0 #00000029;
-        cursor: pointer;
-        margin-top: 77px;
-      }
-
-
-      .action_title{
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 500;
-        color: #FFFFFF;
-      }
-
-      &-1{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #FFFFFF;
-        font-weight: 400;
-        line-height: 16px;
-        font-size: 12px;
-        margin-top: 16px;
-
-        .radio_type-1{
-          background-image: url("../assets/img/radioButton.svg");
-          background-position: -20px -124px;
-          height: 32px;
-          width: 32px;
-        }
-
-        .radio_type-2{
-          background-image: url("../assets/img/radioButton.svg");
-          background-position: -20px -20px;
-          height: 32px;
-          width: 32px;
-        }
-
-
-
-
-      }
-
-      &-2{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #FFFFFF;
-        font-weight: 400;
-        line-height: 16px;
-        font-size: 12px;
-        margin-top: 16px;
-
-        .radio_sex-1{
-          background-image: url("../assets/img/radioButton.svg");
-          background-position: -20px -124px;
-          height: 32px;
-          width: 32px;
-        }
-
-        .radio_sex-2{
-          background-image: url("../assets/img/radioButton.svg");
-          background-position: -20px -20px;
-          margin-left: 5vh;
-          height: 32px;
-          width: 32px;
-        }
-      }
-    }
-
-    .factory_selector{
-      display: flex;
-      flex-direction: column;
-
-      .factory_selector-arms{
-        display: flex;
-
-
-        .arm_parts-1,
-        .arm_parts-2,
-        .arm_parts-3,
-        .arm_parts-4{
-          background-image: url("../assets/img/Arms.svg");
-          background-position: -20px -20px;
-          height: 48px;
-          width: 48px;
-          margin-right: 10px;
-          cursor: pointer;
-        }
-      }
-
-      .factory_selector-proc{
-        display: flex;
-        margin-top: 16px;
-
-        .proc_parts-1,
-        .proc_parts-2,
-        .proc_parts-3,
-        .proc_parts-4,{
-          background-image: url("../assets/img/Icon meh.svg");
-          background-repeat: no-repeat;
-          background-size: cover;
-          height: 48px;
-          width: 48px;
-          margin-right: 10px;
-          cursor: pointer;
-        }
-      }
-      .soul_parts{
-        background-image: url("../assets/img/SoulAvailable.svg");
-        height: 48px;
-        width: 48px;
-        cursor: pointer;
-        margin-top: 16px;
-      }
-
-      .info{
-        font-size: 12px;
-        line-height: 16px;
-        font-weight: 500;
-        color: #A3B8CC;
-        margin-top: 60px;
-        width: 195px;
-        height: 48px;
-      }
-    }
-
-    .factory_result{
-      background-image: url("../assets/img/robots/Frontend_Disable.svg");
-      background-size: cover;
-      width: 236px;
-      height: 320px;
-    }
-  }
-}
 
 
 

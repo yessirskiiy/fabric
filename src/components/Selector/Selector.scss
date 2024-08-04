@@ -1,0 +1,88 @@
+.factory_selector {
+  display: flex;
+  flex-direction: column;
+
+  .factory_selector-arms {
+    display: flex;
+
+
+    .arm_parts-1,
+    .arm_parts-2,
+    .arm_parts-3,
+    .arm_parts-4 {
+      background-image: url("../../assets/img/Arms.svg");
+      background-position: -20px -156px;
+      height: 48px;
+      width: 48px;
+      margin-right: 10px;
+
+      &.available {
+        cursor: pointer;
+        background-position: -20px -88px;
+
+      }
+
+      &.active {
+        cursor: pointer;
+        background-position: -20px -20px;
+      }
+    }
+  }
+
+  .factory_selector-proc {
+    display: flex;
+    margin-top: 16px;
+
+    .proc_parts-1,
+    .proc_parts-2,
+    .proc_parts-3,
+    .proc_parts-4, {
+      background-image: url("../../assets/img/IconMehDisable.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 48px;
+      width: 48px;
+      margin-right: 10px;
+
+      &.available {
+        background-image: url("../../assets/img/IconMehAvailable.svg");
+        cursor: pointer;
+      }
+
+      &.active {
+        background-image: url("../../assets/img/IconMeh.svg");
+        cursor: pointer;
+      }
+
+    }
+
+
+  }
+
+  .soul_parts {
+    background-image: url("../../assets/img/SoulDisable.svg");
+    height: 48px;
+    width: 48px;
+    margin-top: 16px;
+
+    &.active {
+      cursor: pointer;
+      background-image: url("../../assets/img/SoulEnable.svg");
+    }
+
+    &.available {
+      cursor: pointer;
+      background-image: url("../../assets/img/SoulAvailable.svg");
+    }
+  }
+
+  .info {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #A3B8CC;
+    margin-top: 60px;
+    width: 195px;
+    height: 48px;
+  }
+}

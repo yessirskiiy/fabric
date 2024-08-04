@@ -1,0 +1,34 @@
+.action_title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.factory_actions-1,
+.factory_actions-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 16px;
+  font-size: 12px;
+  margin-top: 16px;
+  cursor: pointer;
+
+
+  .radio_type,
+  .radio_sex {
+    background-image: url("../../assets/img/radioButton.svg");
+    background-position: -20px -20px;
+    height: 32px;
+    width: 32px;
+  }
+
+  .radio_type.checked,
+  .radio_sex.checked {
+    background-position: -20px -124px;
+  }
+
+}

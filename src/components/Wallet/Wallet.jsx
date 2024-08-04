@@ -1,7 +1,7 @@
 import React from 'react';
 import './Wallets.scss'
 import Checkbox from "../Checkbox/Checkbox";
-import coins from '../../store/coins'
+import wallet from '../../store/wallet'
 import {observer} from "mobx-react-lite"
 import checkbox from "../../store/checkbox";
 
@@ -27,14 +27,14 @@ const Wallet = observer(() => {
         <div className='wallet'>
             <h2 className='wallet_title'>Кошелёк криптовалют</h2>
             <div className='wallet_container'>
-                {Array.from({ length: coins.coin }).map(() => (
+                {Array.from({ length: wallet.coin }).map(() => (
                     <div className='wallet_container-coin'></div>
                 ))}
             </div>
-            <span className='wallet_counter'>{coins.coin} biorobo {coinText(coins.coin)}</span>
+            <span className='wallet_counter'>{wallet.coin} biorobo {coinText(wallet.coin)}</span>
             <div className='wallet_cheat'>
-                <div className={`wallet_cheat-action ${coins.coin < 100 ? '' : 'disabled'}`}
-                     onClick={(coins.addCoin)}
+                <div className={`wallet_cheat-action ${wallet.coin < 100 ? '' : 'disabled'}`}
+                     onClick={(wallet.addCoin)}
                 ></div>
                 <Checkbox
                     checked={checkbox.isChecked}
