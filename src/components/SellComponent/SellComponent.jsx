@@ -20,10 +20,14 @@ const SellComponent = observer(({label, price, item, amount}) => {
 
     const [modal, setModal] = useState(false)
 
-    const isEnableBtn = !activeSoul && !activeArms.some(Boolean) && !activeProcessors.some(Boolean) && !amount <= 0
+
+    const isEnable =
+        (item === 'arm' && !activeArms.some(Boolean) && amount > 0) ||
+        (item === 'processor' && !activeProcessors.some(Boolean) && amount > 0) ||
+        (item === 'soul' && !activeSoul && amount > 0)
 
     const handleSell = () => {
-        if (isEnableBtn) {
+        if (isEnable) {
             const newCoinAmount = coin + price
 
             if (newCoinAmount > 100) {
@@ -42,8 +46,8 @@ const SellComponent = observer(({label, price, item, amount}) => {
             <h3>{label}</h3>
             <p>Стоимость {price} монет</p>
             <h3>{amount} шт</h3>
-            <button className={`storage_${item}-btn ${!isEnableBtn ? 'disabled' : ''}`}
-                    disabled={!isEnableBtn}
+            <button className={`storage_${item}-btn ${!isEnable ? 'disabled' : ''}`}
+                    disabled={!isEnable}
                     onClick={handleSell}>Продать
             </button>
             <MyModal visible={modal}

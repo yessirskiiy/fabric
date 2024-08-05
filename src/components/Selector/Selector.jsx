@@ -57,7 +57,7 @@ const Selector = observer(() => {
         } else {
             return 'Готово к производству'
         }
-    };
+    }
 
 
 
