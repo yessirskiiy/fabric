@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {observer} from "mobx-react-lite";
 import wallet from "../../store/wallet";
 import MyModal from "../MyModal/MyModal";
+import selector from "../../store/selector";
 
 
 const SellComponent = observer(({label, price, item, amount}) => {
@@ -11,18 +12,28 @@ const SellComponent = observer(({label, price, item, amount}) => {
         sellComponent
     } = wallet
 
+    const {
+        activeArms,
+        activeProcessors,
+        activeSoul
+    } = selector
+
     const [modal, setModal] = useState(false)
 
+    const isEnableBtn = !activeSoul && !activeArms.some(Boolean) && !activeProcessors.some(Boolean) && !amount <= 0
+
     const handleSell = () => {
-        const newCoinAmount = coin + price;
+        if (isEnableBtn) {
+            const newCoinAmount = coin + price
 
-        if (newCoinAmount > 100) {
-            setModal(true);
-            return;
+            if (newCoinAmount > 100) {
+                setModal(true)
+                return
+            }
+
+            sellComponent(item)
         }
-
-        sellComponent(item);
-    };
+    }
 
 
     return (
@@ -31,11 +42,16 @@ const SellComponent = observer(({label, price, item, amount}) => {
             <h3>{label}</h3>
             <p>Стоимость {price} монет</p>
             <h3>{amount} шт</h3>
-            <button className={`storage_${item}-btn ${amount <= 0 ? 'disabled': ''}`}
-                    disabled={amount <= 0}
+            <button className={`storage_${item}-btn ${!isEnableBtn ? 'disabled' : ''}`}
+                    disabled={!isEnableBtn}
                     onClick={handleSell}>Продать
             </button>
-            <MyModal visible={modal} setVisible={setModal}></MyModal>
+            <MyModal visible={modal}
+                     setVisible={setModal}
+                     showImage={true}
+                     text='Вы не можете нацыганить более 100 монет biorobo'
+                     title='Количество монет ограничено'>
+            </MyModal>
         </div>
     );
 });

@@ -1,5 +1,7 @@
 import {makeAutoObservable} from "mobx";
 import checkbox from "./checkbox";
+import selector from "./selector"
+import radio from "./radio";
 
 class Wallet {
 
@@ -88,6 +90,21 @@ class Wallet {
         }
 
         this.selectedItem = null
+    }
+
+    produceRobot = () => {
+        this.coin -= 10
+        this.soulAmount = 0
+        this.processorAmount = 0
+        this.armAmount = 0
+
+        selector.activeArms.fill(false)
+        selector.activeProcessors.fill(false)
+        selector.activeSoul = false
+
+        radio.selectedSex = ''
+        radio.selectedType = ''
+
 
     }
 

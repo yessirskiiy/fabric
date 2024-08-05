@@ -55,8 +55,6 @@
       }
 
     }
-
-
   }
 
   .soul_parts {
@@ -65,14 +63,14 @@
     width: 48px;
     margin-top: 16px;
 
-    &.active {
-      cursor: pointer;
-      background-image: url("../../assets/img/SoulEnable.svg");
-    }
-
     &.available {
       cursor: pointer;
       background-image: url("../../assets/img/SoulAvailable.svg");
+    }
+
+    &.active {
+      cursor: pointer;
+      background-image: url("../../assets/img/SoulEnable.svg");
     }
   }
 
